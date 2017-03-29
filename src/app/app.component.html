@@ -1,0 +1,9 @@
+<md-toolbar flex color="primary">
+  <h2>RSS Feed Burner</h2>
+  <button md-fab (click)="refreshFeed()" class="right" ><md-icon >refresh</md-icon></button>
+</md-toolbar>
+ 
+ 
+
+<app-rss-card *ngFor="let feed of feeds" [feed]="feed" ></app-rss-card>
+<app-spinner *ngIf="!feeds"></app-spinner>
